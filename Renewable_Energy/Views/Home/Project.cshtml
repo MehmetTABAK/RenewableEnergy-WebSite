@@ -1,5 +1,7 @@
-﻿@using Renewable_Energy_Entities
-@model List<Project>
+﻿@using ImageMagick
+@using Renewable_Energy_Entities
+@using Renewable_Energy_Entities.DTOs
+@model List<ProjectCategoryDTO>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,11 +67,19 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 mix filter-infractures">
                             <div class="portfolio-item">
                                 <div class="portfolio__img">
-                                    <img src="@project.ImageUrl" alt="portfolio img">
+                                    @{
+                                        using (var image = new MagickImage(project.ImageUrl))
+                                        {
+                                            image.Resize(new MagickGeometry(650, 600));
+                                            var base64String = Convert.ToBase64String(image.ToByteArray());
+                                            var imgSrc = $"data:image/{image.Format.ToString().ToLower()};base64,{base64String}";
+                                            <img src="@imgSrc" alt="portfolio img">
+                                        }
+                                    }
                                 </div><!-- /.portfolio-img -->
                                 <div class="portfolio__body">
                                     <div class="portfolio__cat">
-                                        <a href="#">Finance</a><a href="#">Supply Chain</a>
+                                        <a href="#">@project.CategoryName</a>
                                     </div><!-- /.portfolio-cat -->
                                     <h4 class="portfolio__title"><a href="#">@project.Title</a></h4>
                                     <p class="portfolio__desc">

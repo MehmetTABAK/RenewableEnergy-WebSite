@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ISdkfCxPTaS3Fz8mkYqRuNPzrCX57ISb/ei4kM4ZTTOxHRglbaBesFoD3Xxkstbs4dOiDZhNyT0Tm+eyZI9EiA==",
+  "dgSpecHash": "nww5VJxg/zsNwz3Tu8Hvn7+1WBOwgYlL65bEo72ErG2em4FDr5szLHuVHltZNbeWKG0NsNNGIo/QDEEtS1EKTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Desktop\\Renewable_Energy\\Renewable_Energy\\Renewable_Energy_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\magick.net-q16-anycpu\\13.4.0\\magick.net-q16-anycpu.13.4.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\magick.net.core\\13.4.0\\magick.net.core.13.4.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\7.0.11\\microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.11.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",

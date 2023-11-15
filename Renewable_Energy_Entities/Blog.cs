@@ -14,6 +14,7 @@ namespace Renewable_Energy_Entities
         public string ImageUrl { get; set; }
         public int CategoryId { get; set; }
         public DateTime Time { get; set; }
+        public string Writer {  get; set; }
         public ICollection<ProjectBlogRelation> Projects { get; set; }
         public virtual BlogCategory Category { get; set; }
     }

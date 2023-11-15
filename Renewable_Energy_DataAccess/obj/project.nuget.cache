@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "R8eYStauDSsrzg8l73Brm1IWh88NZLuzfe3lVKo83YTukwf8r7KxyXj02uhJi05lF8Gj/hb4XmB9MXRAVIVhcg==",
+  "dgSpecHash": "VnBK1LHayqQwVA9cpy1U39kZ3GTLkLCrH8UMxJEdi15NwHsNRzVtwinbnpQBLK8Plm+qABrrl8XSNs1bzUoLhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Desktop\\Renewable_Energy\\Renewable_Energy_DataAccess\\Renewable_Energy_DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\magick.net.core\\13.4.0\\magick.net.core.13.4.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

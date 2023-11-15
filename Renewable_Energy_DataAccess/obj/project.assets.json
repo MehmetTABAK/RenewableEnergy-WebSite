@@ -59,6 +59,19 @@
           }
         }
       },
+      "Magick.NET.Core/13.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1058,6 +1071,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Magick.NET.Core": "13.4.0",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
         },
@@ -1125,6 +1139,24 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Magick.NET.Core/13.4.0": {
+      "sha512": "Z1om0NiXREKUUI2BYKM86RSgMpBJFuc+OCI25fPtF/evpWsWm83kpACMODuNs60Bv/I4sn8VCGqezQA2/azWKA==",
+      "type": "package",
+      "path": "magick.net.core/13.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Copyright.txt",
+        "Magick.NET.icon.png",
+        "docs/Readme.md",
+        "lib/netstandard20/Magick.NET.Core.dll",
+        "lib/netstandard20/Magick.NET.Core.xml",
+        "lib/netstandard21/Magick.NET.Core.dll",
+        "lib/netstandard21/Magick.NET.Core.xml",
+        "magick.net.core.13.4.0.nupkg.sha512",
+        "magick.net.core.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -2898,6 +2930,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Magick.NET.Core >= 13.4.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
@@ -2953,6 +2986,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Magick.NET.Core": {
+            "target": "Package",
+            "version": "[13.4.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.13, )"

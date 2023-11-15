@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Renewable_Energy_DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Renewable_Energy_Entities.DTOs;
+using System.Text.Json;
 
 namespace Renewable_Energy.Controllers
 {
@@ -37,14 +38,38 @@ namespace Renewable_Energy.Controllers
 
         public IActionResult Blog()
         {
-            List<Renewable_Energy_Entities.Blog> blogs = context.Blogs.ToList();
-            return View(blogs);
+            List<BlogCategoryDTO> blog = context.Blogs.Include(w => w.Category).ToList().Select(blog =>
+            new BlogCategoryDTO
+            {
+                Id = blog.Id,
+                Title = blog.Title,
+                Body = blog.Body,
+                ImageUrl =blog.ImageUrl,
+                CategoryId=blog.CategoryId,
+                Time=blog.Time,
+                Writer=blog.Writer,
+                CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+            }
+            ).ToList();
+            return View(blog);
         }
 
         public IActionResult Project()
         {
-            List<Renewable_Energy_Entities.Project> projects = context.Projects.ToList();
-            return View(projects);
+            List<ProjectCategoryDTO> project = context.Projects.Include(w => w.Category).ToList().Select(project =>
+            new ProjectCategoryDTO
+            {
+                Id = project.Id,
+                Title = project.Title,
+                Body = project.Body,
+                ImageUrl = project.ImageUrl,
+                VideoUrl=project.VideoUrl,
+                ReferenceId=project.ReferenceId,
+                CategoryId = project.CategoryId,
+                CategoryName = project.Category != null ? string.Join(", ", project.Category.Name) : string.Empty,
+            }
+            ).ToList();
+            return View(project);
         }
 
         public IActionResult WorkingPlaces()

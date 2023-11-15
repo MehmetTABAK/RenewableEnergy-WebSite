@@ -51,6 +51,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Magick.NET-Q16-AnyCPU": {
+              "target": "Package",
+              "version": "[13.4.0, )"
+            },
+            "Magick.NET.Core": {
+              "target": "Package",
+              "version": "[13.4.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -143,6 +151,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Magick.NET.Core": {
+              "target": "Package",
+              "version": "[13.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -224,6 +236,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Magick.NET.Core": {
+              "target": "Package",
+              "version": "[13.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
