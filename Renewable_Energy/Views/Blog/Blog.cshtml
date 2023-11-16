@@ -1,0 +1,121 @@
+﻿@using Renewable_Energy_Entities
+@using Renewable_Energy_Entities.DTOs
+@model List<BlogCategoryDTO>
+
+<div class="wrapper">
+    <!-- ========================
+       page title
+    =========================== -->
+    <section class="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax text-center">
+        <div class="bg-img"><img src="~/images/page-titles/11.jpg" alt="background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="pagetitle__heading mb-0">Bloglar</h1>
+                    <a href="#blogs" class="scroll-down">
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                </div><!-- /.col-xl-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.page-title -->
+    <!-- ======================
+      Blog Grid
+    ========================= -->
+    <section id="blogs" class="post-grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">
+                        <li><a class="filter active" href="#" data-filter="all">Tüm Bloglar</a></li>
+                        <li><a class="filter" href="#" data-filter=".filter-gunes">Güneş Panelleri</a></li>
+                        <li><a class="filter" href="#" data-filter=".filter-ruzgar">Rüzgar Türbinleri</a></li>
+                        <li><a class="filter" href="#" data-filter=".filter-su">Su Türbinleri</a></li>
+                        <li><a class="filter" href="#" data-filter=".filter-jeo">Jeotermal Türbinler</a></li>
+                        <li><a class="filter" href="#" data-filter=".filter-jene">Jeneratörler</a></li>
+                    </ul><!-- /.portfolio-filter  -->
+                </div><!-- /.col-lg-12 -->
+                <!-- Post Item #1 -->
+            </div><!-- /.row -->
+            <div id="filtered-items-wrap" class="row">
+                @foreach (var blog in Model)
+                {
+                    <div class="col-sm-12 col-md-6 col-lg-4 mix filter-infractures">
+                        <div class="post-item">
+                            <div class="post__img">
+                                <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})">
+                                    <img src="@blog.ImageUrl" alt="post image" loading="lazy">
+                                </a>
+                                <span class="post__date">@blog.Time</span>
+                            </div><!-- /.post-img -->
+                            <div class="post__body">
+                                <div class="post__meta d-flex align-items-center">
+                                    <div class="post__cat">
+                                        <a href="#">@blog.CategoryName</a>
+                                    </div><!-- /.post-meta-cat -->
+                                    <a class="post__author" href="#">@blog.Writer</a>
+                                </div><!-- /.post-meta -->
+                                <h4 class="post__title">
+                                    <a href="#">
+                                        @blog.Title
+                                    </a>
+                                </h4>
+                                <p class="post__desc">
+                                    @blog.Body
+                                </p>
+                                <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})" class="btn btn__secondary btn__outlined btn__custom">
+                                    <i class="icon-arrow-right"></i>
+                                    <span>Devamını Oku</span>
+                                </a>
+                            </div><!-- /.post-content -->
+                        </div><!-- /.post-item -->
+                    </div>
+                    <!-- /.col-lg-4 -->
+                }
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <nav class="pagination-area">
+                        <ul class="pagination justify-content-center">
+                            <li><a class="current" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#"><i class="icon-arrow-right"></i></a></li>
+                        </ul>
+                    </nav><!-- .pagination-area -->
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog Grid -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+</div><!-- /.wrapper -->
+@section Scripts{
+    <script>
+        $(function () {
+            if (getParameterByName("selected") == "ruzgar") {
+                $("a[data-filter='.filter-ruzgar']").click();
+            }
+            else if (getParameterByName("selected") == "su") {
+                $("a[data-filter='.filter-su']").click();
+            }
+            else if (getParameterByName("selected") == "gunes") {
+                $("a[data-filter='.filter-gunes']").click();
+            }
+            else if (getParameterByName("selected") == "jeo") {
+                $("a[data-filter='.filter-jeo']").click();
+            }
+            else if (getParameterByName("selected") == "jene") {
+                $("a[data-filter='.filter-jene']").click();
+            }
+        });
+
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    </script>
+    }

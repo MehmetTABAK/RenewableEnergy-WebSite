@@ -1,0 +1,157 @@
+﻿@using Renewable_Energy_Entities
+@model List<AboutUs>
+
+<div class="wrapper">
+    <!-- ========================
+       page title
+    =========================== -->
+    <section class="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax text-center">
+        <div class="bg-img"><img src="~/images/page-titles/1.jpg" alt="background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="pagetitle__heading mb-0">Hakkımızda</h1>
+                    <a href="#about" class="scroll-down">
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                </div><!-- /.col-xl-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.page-title -->
+    <!-- ========================
+      About Layout 1
+    =========================== -->
+    <section id="about" class="about-layout1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-1">
+                    <div class="heading__layout2 mb-60">
+                        <h3 class="heading__title">@Model.FirstOrDefault()?.Title</h3>
+                    </div><!-- /.heading__layout2 -->
+                </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <div class="video-banner-layout2">
+                        <img src="~/images/about/1.jpg" alt="about" class="w-100">
+                        <div class="video-has-img">
+                            <img src="~/images/video/1.jpg" alt="video">
+                            <a class="video__btn video__btn-white popup-video" href="@Model.FirstOrDefault()?.VideoUrl">
+                                <div class="video__player">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </a>
+                            <span class="video__btn-title">Tanıtımımızı İzleyin!</span>
+                        </div>
+                    </div><!-- /.video-banner -->
+                </div><!-- /.col-lg-5 -->
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <div class="about__text">
+                        <div class="text__icon">
+                            <i class="icon-green-energy3"></i>
+                        </div>
+                        <p class="heading__desc font-weight-medium color-secondary mb-30">
+                            @Model.FirstOrDefault()?.Body
+                        </p>
+                        <hr>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#menu2">Vizyonumuz<br /><br /></a></li>
+                            <li><a data-toggle="tab" href="#menu1" style="margin-left: 30px">Misyonumuz<br /><br /></a></li>
+                        </ul>
+                        <!-- Tabs Heading Ends -->
+                        <!-- Tabs Content Starts -->
+                        <div class="tab-content">
+                            <div id="menu1" class="tab-pane fade">
+                                <p>@Model.FirstOrDefault()?.Mission</p>
+                            </div>
+                            <div id="menu2" class="tab-pane fade in active">
+                                <p>@Model.FirstOrDefault()?.Vision</p>
+                            </div>
+                        </div>
+                    </div><!-- /.about__text -->
+                </div><!-- /.col-lg-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.About Layout 1 -->
+    <!-- ======================
+    Features Layout 1
+    ========================= -->
+    <section class="features-layout1 pt-120 pb-80">
+        <div class="bg-img"><img src="~/images/backgrounds/3.jpg" alt="background"></div>
+        <div class="container">
+            <div class="row mb-40">
+                <div class="col-12">
+                    <h2 class="heading__subtitle color-primary">
+                        Yarını Bugünden Farklı Hale Getirmek.
+                    </h2>
+                </div><!-- /col-12 -->
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <h3 class="heading__title color-white">Sürdürülebilir ve Güvenilir Enerji Sistemleriyle Topluma Enerji Verin!</h3>
+                </div><!-- /col-lg-5 -->
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+                    <p class="heading__desc color-gray mb-20">
+                        Son yıllarda güneş enerjisi değer zincirinde yeni kapasiteler ortaya çıktı.
+                        PV pazarının büyümesini desteklememiz gerekli. Ancak kurmak ve büyütmek için gereken sermaye
+                        çok fazladır. Biz de elimizden geldiği kadarı ile ve yaptığımız projeler ile büyütmeye çalışıyoruz.
+                    </p>
+                    <a href="@Url.ActionLink("Project","Home")" class="btn btn__primary btn__outlined btn__custom">
+                        <i class="icon-arrow-right"></i>
+                        <span>Tüm Projelerimiz İnceleyin!</span>
+                    </a>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="read-note d-flex flex-wrap mt-60">
+                        <div class="rating mb-10 mr-50">
+                            <i class="fas fa-star color-primary"></i>
+                            <i class="fas fa-star color-primary"></i>
+                            <i class="fas fa-star color-primary"></i>
+                            <i class="fas fa-star color-primary"></i>
+                            <i class="fas fa-star color-primary"></i>
+                        </div>
+                        <p class="read-note__text">
+                            <span class="font-weight-bold text-underlined-primary color-primary">
+                                %99,9 Müşteri Memnuniyeti
+                            </span>
+
+                            750'den fazla incelemeye ve 20.000 Nesnel Kaynağa dayanmaktadır
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </section><!-- /.Features Layout 1 -->
+    <!-- =========================
+       Banner layout 1
+      =========================== -->
+    <section class="banner-layout1 py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-7">
+                    <div class="text-block">
+                        <div class="banner__text">
+                            <p>
+                                Güneş enerjisi ürünlerinin verimini ve performansını artırmak amacıyla, PV sektöründeki
+                                deneyimimiz sayesinde her adımda derinlemesine malzeme tedariki,
+                                finansman ve tedarik zinciri uzmanlığı sunuyoruz.
+                            </p>
+                        </div><!-- /.banner__text -->
+                        <ul class="list-items list-items-layout2 list-unstyled mb-0">
+                            <li>Sertifikasyon için profesyonel yerinde servis ve destek.</li>
+                            <li>Kararlı dönüşüm verimliliği için düzenli ışık kaynağı.</li>
+                            <li>Periyodik izleme ve üstün plaka ile en düşük LID.</li>
+                        </ul>
+                    </div><!-- /.text-block -->
+                </div><!-- /.col-lg-7 -->
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <div class="img-block">
+                        <img src="~/images/banners/1.png" alt="banner">
+                    </div><!-- /.img-block -->
+                </div><!-- /.col-lg-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.Banner layout 1 -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+</div><!-- /.wrapper -->

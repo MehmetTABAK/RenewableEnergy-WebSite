@@ -1,0 +1,55 @@
+﻿@using Renewable_Energy_Entities
+@model List<AboutUs>
+
+<section id="about" class="about-layout1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-1">
+                <div class="heading__layout2 mb-60">
+                    <h3 class="heading__title">@Model.FirstOrDefault()?.Title</h3>
+                </div><!-- /.heading__layout2 -->
+            </div><!-- /.col-lg-7 -->
+        </div><!-- /.row -->
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="video-banner-layout2">
+                    <img src="~/images/about/1.jpg" alt="about" class="w-100">
+                    <div class="video-has-img">
+                        <img src="~/images/video/1.jpg" alt="video">
+                        <a class="video__btn video__btn-white popup-video" href="@Model.FirstOrDefault()?.VideoUrl">
+                            <div class="video__player">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </a>
+                        <span class="video__btn-title">Tanıtımımızı İzleyin!</span>
+                    </div>
+                </div><!-- /.video-banner -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="about__text">
+                    <div class="text__icon">
+                        <i class="icon-green-energy3"></i>
+                    </div>
+                    <p class="heading__desc font-weight-medium color-secondary mb-30">
+                        @Model.FirstOrDefault()?.Body
+                    </p>
+                    <hr>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#menu2">Vizyonumuz<br /><br /></a></li>
+                        <li><a data-toggle="tab" href="#menu1" style="margin-left: 30px">Misyonumuz<br /><br /></a></li>
+                    </ul>
+                    <!-- Tabs Heading Ends -->
+                    <!-- Tabs Content Starts -->
+                    <div class="tab-content">
+                        <div id="menu1" class="tab-pane fade">
+                            <p>@Model.FirstOrDefault()?.Mission</p>
+                        </div>
+                        <div id="menu2" class="tab-pane fade in active">
+                            <p>@Model.FirstOrDefault()?.Vision</p>
+                        </div>
+                    </div>
+                </div><!-- /.about__text -->
+            </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.About Layout 1 -->

@@ -1,0 +1,69 @@
+﻿@using ImageMagick
+@using Renewable_Energy_Entities
+@using Renewable_Energy_Entities.DTOs
+@model List<ProjectCategoryDTO>
+
+<!-- ======================
+        portfolio Layout 3
+         ========================= -->
+<section class="portfolio-layout3 portfolio-carousel pt-120">
+    <div class="bg-img"><img src="images/backgrounds/5.jpg" alt="background"></div>
+    <div class="container">
+        <div class="row mb-60">
+            <div class="col-12">
+                <h2 class="heading__subtitle color-primary">Güneş Enerjisinin Performansının Artırılması.</h2>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <h3 class="heading__title color-white">
+                    En Son Projeler, Çözümler ve Enerji Tedarikleri
+                </h3>
+            </div><!-- /col-lg-5 -->
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+                <p class="heading__desc font-weight-bold color-gray mb-30">
+
+                    Yenilikçi teknolojilerimizle, net bir şekilde odaklanma
+                    bizim ihtiyaçları
+                    müşterilerimiz ve 1.210 kendini adamış çalışanımızla topluma enerji veriyoruz. Yarını bugünden farklı kılalım!
+                </p>
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-12">
+                <div class="carousel-container">
+                    <div class="slick-carousel carousel-arrows-light carousel-dots-light"
+                         data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2 ,"slidesToScroll": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2,"slidesToScroll": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1,"slidesToScroll": 1}}]}'>
+                        <!-- portfolio item #1 -->
+                        @foreach(var project in Model)
+                        {
+                            <div class="portfolio-item">
+                                <div class="portfolio__img">
+                                    <img src="@project.ImageUrl" alt="portfolio img">
+                                </div><!-- /.portfolio-img -->
+                                <div class="portfolio__body">
+                                    <div class="portfolio__cat">
+                                        <a href="#">
+                                            @project.CategoryName
+                                        </a>
+                                    </div><!-- /.portfolio-cat -->
+                                    <h4 class="portfolio__title"><a href="#">@project.Title</a></h4>
+                                    <p class="portfolio__desc">
+                                        @project.Body
+                                    </p>
+                                    <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})" class="btn btn__primary btn__sm">
+                                        <i class="icon-arrow-right"></i>
+                                        <span>
+                                            Daha Fazlasını Keşfedin
+                                        </span>
+                                    </a>
+                                </div><!-- /.portfolio__body -->
+                            </div>
+
+                            <!-- /.portfolio-item -->
+                        }
+                    </div><!-- /.carousel-->
+                    <a href="@Url.ActionLink("Project","Project")" class="view-projects d-none d-xl-flex">Tüm Projeler</a>
+                </div><!-- /.carousel-container -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.portfolio Layout 3 -->

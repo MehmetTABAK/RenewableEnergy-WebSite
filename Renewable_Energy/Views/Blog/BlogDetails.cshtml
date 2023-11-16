@@ -1,0 +1,66 @@
+﻿@using Renewable_Energy_Entities
+@model Blog
+
+<div class="wrapper">
+    <!-- ========================
+       page title
+    =========================== -->
+    <section class="page-title pt-30 pb-30">
+    </section><!-- /.page-title -->
+    <!-- ======================
+      Blog Single
+    ========================= -->
+    <section class="blog blog-single pt-0 pb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="post-item mb-0">
+                        <div class="post__img">
+                            <a href="#">
+                                <img src="@Model.ImageUrl" alt="post image">
+                            </a>
+                        </div><!-- /.entry-img -->
+                        <div class="post__body">
+                            <div class="post__meta d-flex align-items-center">
+                                <span class="post__date">@Model.Time</span>
+                                <span class="post__author">Yazar: <a href="#">@Model.Writer</a></span>
+                            </div><!-- /.post-meta -->
+                            <h1 class="post__title">@Model.Title</h1>
+                            <div class="post__desc">
+                                <p>
+                                    @Model.Body
+                                </p>
+                            </div><!-- /.post-desc -->
+                        </div><!-- /.entry-content -->
+                    </div><!-- /.post-item -->
+                    <div class="blog-share d-flex flex-wrap align-items-center justify-content-between mb-30">
+                        <strong class="mr-20 color-heading">Makaleyi Paylaş</strong>
+                        <ul class="list-unstyled social-icons d-flex mb-0">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google"></i></a></li>
+                        </ul>
+                    </div><!-- /.blog-share -->
+                </div><!-- /.col-lg-8 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <aside class="sidebar">
+                        <div class="widget widget-categories">
+                            <h5 class="widget__title">Blog Kategorileri</h5>
+                            <div class="widget-content">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="@Url.ActionLink("Blog", "Blog")?selected=gunes"><span class="cat-count">1</span><span>Güneş Panalleri</span></a></li>
+                                    <li><a href="@Url.ActionLink("Blog", "Blog")?selected=ruzgar"><span class="cat-count">2</span><span>Rüzgar Türbinleri</span></a></li>
+                                    <li><a href="@Url.ActionLink("Blog", "Blog")?selected=su"><span class="cat-count">3</span><span>Su Türbinleri</span></a></li>
+                                    <li><a href="@Url.ActionLink("Blog", "Blog")?selected=jeo"><span class="cat-count">4</span><span>Jeotermal Türbinler</span></a></li>
+                                    <li><a href="@Url.ActionLink("Blog", "Blog")?selected=jene"><span class="cat-count">5</span><span>Jeneratör</span></a></li>
+                                </ul>
+                            </div><!-- /.widget-content -->
+                        </div><!-- /.widget-categories -->
+                    </aside><!-- /.sidebar -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog Single -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+</div><!-- /.wrapper -->

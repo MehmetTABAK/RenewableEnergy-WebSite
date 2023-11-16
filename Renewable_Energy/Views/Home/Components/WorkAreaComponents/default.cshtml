@@ -1,0 +1,61 @@
+﻿@using Renewable_Energy_Entities
+@model List<WorkingArea>
+
+<!-- ======================
+        Features Layout 2
+        ========================= -->
+<section class="features-layout2 pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <h2 class="heading__subtitle color-primary">
+                    Yarını Bugünden Farklı Hale Getirmek.
+                </h2>
+                <h3 class="heading__title">Sürdürülebilir ve Güvenilir Enerji Sistemleriyle Topluma Enerji Verin!</h3>
+                <p class="heading__desc mb-30">
+                    Son yıllarda güneş enerjisi değer zincirinde yeni kapasiteler ortaya çıktı.
+                    haline gelmek
+                    PV pazarının büyümesini desteklemek için gerekli. Ancak kurmak ve büyütmek için gereken sermaye
+                    gofret, güneş pili ve güneş modülü üretim tesisleri oldukça fazladır.
+                </p>
+                <p class="heading__desc mb-40">
+                    Bu faktörler hep birlikte sürdürülebilir operasyon ve
+                    Küresel güneş enerjisi üreticilerinin büyümesi.
+                </p>
+                <a href="@Url.ActionLink("WorkingPlaces","WorkingArea")" class="btn btn__primary btn__outlined btn__custom mb-40">
+                    <i class="icon-arrow-right"></i>
+                    <span>Çalışma Alanlarımızı Keşfedin!</span>
+                </a>
+            </div><!-- /col-lg-5 -->
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+                <div class="row">
+                    <!-- Feature item #1 -->
+                    @foreach (var work in Model)
+                    {
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <div class="feature__icon">
+                                    <img src="@work.ImageUrl">
+                                </div>
+                                <h4 class="feature__title">@work.Title</h4>
+                                <p class="feature__desc">
+                                    @work.Body
+                                </p>
+                            </div><!-- /.feature-item -->
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    }
+                    <div class="col-sm-6">
+                        <div class="feature-item feature-item-custom">
+                            <div class="feature__icon">
+                                <i class="icon-wind-socket"></i>
+                            </div>
+                            <h4 class="feature__title">Ödüller</h4>
+                            <p class="feature__desc">20 yıla yakın tecrübeden faydalanıyoruz.</p>
+                        </div><!-- /.feature-item -->
+                    </div><!-- /.col-sm-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.Features Layout 2 -->

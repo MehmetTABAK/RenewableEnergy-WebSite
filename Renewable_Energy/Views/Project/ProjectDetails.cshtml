@@ -1,0 +1,53 @@
+﻿@using Renewable_Energy_Entities
+@model Project
+
+<div class="wrapper">
+    <!-- ======================
+      Text Content Section
+    ========================= -->
+    <section class="text-content-section pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                    <h1 class="pagetitle__heading mb-0">@Model.Title</h1><br /><br />
+                    <div class="text__block mb-30">
+                        <p class="text__block-desc">
+                            @Model.Body
+                        </p>
+                    </div><!-- /.text-block -->   
+                </div><!-- /.col-lg-8 -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <aside class="sidebar">
+                        <div class="widget widget-categories">
+                            <div class="widget-content">
+                                <div class="gallery-item">
+                                    <a class="popup-gallery-item" href="@Model.ImageUrl">
+                                        <img src="@Model.ImageUrl" alt="gallery img">
+                                    </a>
+                                </div><!-- /.gallery-item -->
+                            </div><!-- /.widget-content -->
+                        </div><!-- /.widget-categories -->
+                        <div class="text__block mb-30">
+                            <h5 class="text__block-title">Nasıl Çalışır?</h5>
+                        </div>
+                        <div class="video-banner mb-70">
+                            <img src="~/images/banners/8.jpg" alt="banner">
+                            <a class="video__btn video__btn-white popup-video" href="@Model.VideoUrl">
+                                <div class="video__player">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </a>
+                            <!-- <a class="video__btn video__btn-white popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                              <div class="video__player">
+                                <i class="fa fa-play"></i>
+                              </div>
+                            </a> -->
+                        </div><!-- /.video-banner -->
+                    </aside><!-- /.sidebar -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.Text Content Section -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+</div><!-- /.wrapper -->

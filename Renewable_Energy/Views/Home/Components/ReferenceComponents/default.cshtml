@@ -1,0 +1,67 @@
+﻿@using Renewable_Energy_Entities
+@using Renewable_Energy_Entities.DTOs
+@model List<ReferenceProjectDTO>
+
+<!-- ======================
+        services Layout 2
+        ========================= -->
+<section class="services-layout2 pt-120">
+    <div class="bg-img"><img src="images/backgrounds/5.jpg" alt="background"></div>
+    <div class="container">
+        <div class="row mb-70">
+            <div class="col-12">
+                <h2 class="heading__subtitle color-primary">
+                    Yarını Bugünden Farklı Hale Getirmek.
+                </h2>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <h3 class="heading__title color-white">
+                    Referanslarımız
+                </h3>
+            </div><!-- /col-lg-5 -->
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+                <div class="d-flex align-items-center">
+                    <a href="@Url.ActionLink("Reference","Reference")" class="btn btn__primary btn__primary-style2 mr-30">
+                        <i class="icon-arrow-right"></i>
+                        <span>Tüm Hizmetleri Keşfedin</span>
+                    </a>
+                </div>
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-12">
+                <div class="slick-carousel carousel-arrows-light"
+                     data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "arrows": true, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1, "slidesToScroll": 1}}]}'>
+                    <!-- service item #1 -->
+                    @foreach (var refe in Model)
+                    {
+                        <div class="service-item">
+                            <div class="service__img">
+                                <img src="@refe.ReferenceImageUrl" alt="service" loading="lazy">
+                            </div><!-- /.service__img -->
+                            <div class="service__body">
+                                <h4 class="service__title">
+                                    @refe.ReferenceName
+                                </h4>
+                                <p class="service__desc">
+                                    @refe.ProjectName
+                                </p>
+                            </div><!-- /.service__body -->
+                        </div>
+                        <!-- /.service-item -->
+                    }
+                </div><!-- /.carousel-->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <p class="read-note__text">
+                    <strong class="color-white">
+                        Daha sürdürülebilir, güvenilir ve
+                        Uygun fiyatlı enerji sistemleri
+                    </strong>
+                </p>
+            </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.services Layout 2 -->
