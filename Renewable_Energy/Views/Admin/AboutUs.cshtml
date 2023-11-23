@@ -1,0 +1,48 @@
+﻿@using Renewable_Energy_Entities
+@model List<AboutUs>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form class="form-group" method="post">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th>ImageUrl</th>
+                <th>VideoUrl</th>
+                <th>Vision</th>
+                <th>Mission</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Location</th>
+                <th>WorkTimes</th>
+                <th>Düzenle</th>
+            </tr>
+            <tbody>
+                @foreach (var aboutus in Model)
+                {
+                    <tr>
+                        <td>@aboutus.Id</td>
+                        <td>@aboutus.Title</td>
+                        <td>@aboutus.Body</td>
+                        <td>@aboutus.ImageUrl</td>
+                        <td>@aboutus.VideoUrl</td>
+                        <td>@aboutus.Vision</td>
+                        <td>@aboutus.Mission</td>
+                        <td>@aboutus.Number</td>
+                        <td>@aboutus.Email</td>
+                        <td>@aboutus.Address</td>
+                        <td>@aboutus.Location</td>
+                        <td>@aboutus.WorkingTimes</td>
+                        <th><a class="btn btn-primary" href="@Url.Action("AboutUsUpdate","Admin",new{id=aboutus.Id})">Düzenle</a></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>

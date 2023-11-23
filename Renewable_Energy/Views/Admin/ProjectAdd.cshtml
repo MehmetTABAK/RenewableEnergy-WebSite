@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model Renewable_Energy_Entities.Project
+
+<div class="mid-class">
+    <div class="art-right-w3ls">
+        <h2>Proje Ekle</h2>
+        <form action="#" method="post">
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    @using (Html.BeginForm("ProjectAdd", "Admin", FormMethod.Post))
+                    {
+                        @Html.LabelFor(v => v.Title)
+                        @Html.TextBoxFor(v => v.Title, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Body)
+                        @Html.TextBoxFor(v => v.Body, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.ImageUrl)
+                        @Html.TextBoxFor(v => v.ImageUrl, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.VideoUrl)
+                        @Html.TextBoxFor(v => v.VideoUrl, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.ReferenceId)
+                        <div id="referencedropdown"></div>
+
+                        @Html.LabelFor(v => v.CategoryId)
+                        <div id="categorydropdown"></div>
+
+                        <button class="btn btn-warning">Ekle</button>
+                    }
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+
+        $(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("DropdownAddCategory","Admin")?name=CategoryId",
+                success: function (jsReturnArgs) {
+
+                    $("#categorydropdown").html(jsReturnArgs);
+                }
+            });
+
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("DropdownAddReference","Admin")?name=ReferenceId",
+                success: function (jsReturnArgs) {
+
+                    $("#referencedropdown").html(jsReturnArgs);
+                }
+            });
+
+        });
+    </script>
+}

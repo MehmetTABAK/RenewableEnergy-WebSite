@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model Renewable_Energy_Entities.WorkingArea
+
+<div class="mid-class">
+    <div class="art-right-w3ls">
+        <h2>Çalışma Alanları Güncelle</h2>
+        <form action="#" method="post">
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    @using (Html.BeginForm("WorkingAreaUpdate", "Admin", FormMethod.Post))
+                    {
+                        @Html.LabelFor(v => v.Id)
+                        @Html.TextBoxFor(v => v.Id, new{@class = "form-control", @readonly="readonly"})
+
+                        @Html.LabelFor(v => v.Title)
+                        @Html.TextBoxFor(v => v.Title, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Body)
+                        @Html.TextBoxFor(v => v.Body, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Details)
+                        @Html.TextBoxFor(v => v.Details, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.ImageUrl)
+                        @Html.TextBoxFor(v => v.ImageUrl, new{@class = "form-control"})
+
+                        <button class="btn btn-warning">Güncelle</button>
+                    }
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

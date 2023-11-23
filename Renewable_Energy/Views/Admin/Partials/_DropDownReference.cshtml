@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Renewable_Energy_Entities;
+@model List<Reference>
+
+<select name="@ViewData["Name"]">
+    @foreach (var item in Model)
+    {
+        if ((int)ViewData["value"] == item.Id)
+        {
+            <option value="@item.Id" selected="selected">  @item.Name </option>
+            continue;
+        }
+        <option value="@item.Id"> @item.Name </option>
+
+    }
+</select>

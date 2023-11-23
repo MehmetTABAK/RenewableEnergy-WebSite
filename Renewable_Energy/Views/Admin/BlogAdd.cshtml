@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model Renewable_Energy_Entities.Blog
+
+<div class="mid-class">
+    <div class="art-right-w3ls">
+        <h2>Blog Ekle</h2>
+        <form action="#" method="post">
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    @using (Html.BeginForm("BlogAdd", "Admin", FormMethod.Post))
+                    {
+                        @Html.LabelFor(v => v.Title)
+                        @Html.TextBoxFor(v => v.Title, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Body)
+                        @Html.TextBoxFor(v => v.Body, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.ImageUrl)
+                        @Html.TextBoxFor(v => v.ImageUrl, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Time)
+                        @Html.TextBoxFor(v => v.Time, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.Writer)
+                        @Html.TextBoxFor(v => v.Writer, new{@class = "form-control"})
+
+                        @Html.LabelFor(v => v.CategoryId)
+                        <div id="blogcategorydropdown"></div>
+
+                        <button class="btn btn-warning">Ekle</button>
+                    }
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("DropdownAddBlogCategory","Admin")?name=CategoryId",
+                success: function (jsReturnArgs) {
+
+                    $("#blogcategorydropdown").html(jsReturnArgs);
+                }
+            });
+
+        });
+    </script>
+}

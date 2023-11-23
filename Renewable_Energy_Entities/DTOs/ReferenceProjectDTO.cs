@@ -12,5 +12,6 @@ namespace Renewable_Energy_Entities.DTOs
         public string ReferenceName { get; set; }
         public string ReferenceImageUrl { get; set; }
         public string ProjectName {  get; set; }
+        public int CategoryId{ get; set; }
     }
 }

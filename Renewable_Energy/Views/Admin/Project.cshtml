@@ -1,0 +1,41 @@
+﻿@using Renewable_Energy_Entities.DTOs.Admin
+@model List<ProjectUpdateDTO>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form class="form-group" method="post">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th>ImageUrl</th>
+                <th>VideoUrl</th>
+                <th>ReferenceName</th>
+                <th>CategoryName</th>
+                <th>Düzenle</th>
+                <th>Sil</th>
+            </tr>
+            <tbody>
+                @foreach (var project in Model)
+                {
+                    <tr>
+                        <td>@project.Id</td>
+                        <td>@project.Title</td>
+                        <td>@project.Body</td>
+                        <td>@project.ImageUrl</td>
+                        <td>@project.VideoUrl</td>
+                        <td>@project.ReferenceName</td>
+                        <td>@project.CategoryName</td>
+                        <th><a class="btn btn-primary" href="@Url.Action("ProjectUpdate","Admin",new{id=project.Id})">Düzenle</a></th>
+                        <th><a class="btn btn-warning" href="@Url.Action("ProjectDelete","Admin",new{id=project.Id})">Sil</a></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
+       

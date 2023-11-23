@@ -9,6 +9,8 @@ namespace Renewable_Energy_Entities
 {
     public class ProjectCategory : Entity
     {
+        public int ProjectId { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Project> Projects { get; set;}
     }

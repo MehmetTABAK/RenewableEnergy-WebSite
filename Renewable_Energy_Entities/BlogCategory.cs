@@ -9,6 +9,7 @@ namespace Renewable_Energy_Entities
 {
     public class BlogCategory : Entity
     {
+        public int BlogId { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Blog> Blogs { get; set; }
     }

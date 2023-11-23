@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Renewable_Energy_Entities;
+@model List<BlogCategory>
+
+<select name="@ViewData["Name"]">
+    @foreach (var item in Model)
+    {
+
+        <option value="@item.Id"> @item.Name </option>
+
+    }
+</select>

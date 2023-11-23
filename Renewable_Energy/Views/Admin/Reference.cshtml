@@ -1,0 +1,34 @@
+﻿@using Renewable_Energy_Entities.DTOs
+@model List<ReferenceProjectDTO>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form class="form-group" method="post">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>ImageUrl</th>
+                <th>CategoryName</th>
+                <th>Düzenle</th>
+                <th>Sil</th>
+            </tr>
+            <tbody>
+                @foreach (var refe in Model)
+                {
+                    <tr>
+                        <td>@refe.Id</td>
+                        <td>@refe.ReferenceName</td>
+                        <td>@refe.ReferenceImageUrl</td>
+                        <td>@refe.ProjectName</td>
+                        <th><a class="btn btn-primary" href="@Url.Action("ReferenceUpdate","Admin",new{id=refe.Id})">Düzenle</a></th>
+                        <th><a class="btn btn-warning" href="@Url.Action("ReferenceDelete","Admin",new{id=refe.Id})">Sil</a></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>

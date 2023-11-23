@@ -1,0 +1,36 @@
+﻿@using Renewable_Energy_Entities
+@model List<WorkingArea>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form class="form-group" method="post">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Details</th>
+                <th>ImageUrl</th>
+                <th>Düzenle</th>
+                <th>Sil</th>
+            </tr>
+            <tbody>
+                @foreach (var area in Model)
+                {
+                    <tr>
+                        <td>@area.Id</td>
+                        <td>@area.Title</td>
+                        <td>@area.Body</td>
+                        <td>@area.Details</td>
+                        <td>@area.ImageUrl</td>
+                        <th><a class="btn btn-primary" href="@Url.Action("WorkingAreaUpdate","Admin",new{id=area.Id})">Düzenle</a></th>
+                        <th><a class="btn btn-warning" href="@Url.Action("WorkingAreaDelete","Admin",new{id=area.Id})">Sil</a></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
