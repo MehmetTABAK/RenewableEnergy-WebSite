@@ -9,8 +9,8 @@ namespace Renewable_Energy_Entities
 {
     public class Reference : Entity
     {
-        public string Name { get; set; }
-        public string ImageUrl { get; set; }
+        public string? Name { get; set; }
+        public string? ImageUrl { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
     }
 }

@@ -9,181 +9,185 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Renewable_Energy_Web
 build_property.RootNamespace = Renewable_Energy_Web
-build_property.ProjectDir = C:\Users\PC\Desktop\Renewable_Energy\Renewable_Energy\
+build_property.ProjectDir = C:\Users\PC\Desktop\RenewableEnergy\Renewable_Energy\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\Renewable_Energy\Renewable_Energy
+build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\RenewableEnergy\Renewable_Energy
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/AboutUs/About.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/AboutUs/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVc1xBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/AboutUs/Contact.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/AboutUs/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVc1xDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/AboutUs.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWJvdXRVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/AboutUsUpdate.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/AboutUsUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWJvdXRVc1VwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Blog.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/BlogAdd.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/BlogAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ0FkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/BlogUpdate.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/BlogUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ1VwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Index.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownAddBlogCategory.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownAddBlogCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duQWRkQmxvZ0NhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownAddCategory.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownAddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duQWRkQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownAddReference.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownAddReference.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duQWRkUmVmZXJlbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownCategory.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownCategoryBlog.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownCategoryBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duQ2F0ZWdvcnlCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Partials/_DropDownReference.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Partials/_DropDownReference.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFydGlhbHNcX0Ryb3BEb3duUmVmZXJlbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Project.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Project.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/ProjectAdd.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/ProjectAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/ProjectUpdate.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/ProjectUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/Reference.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/Reference.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVmZXJlbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/ReferenceAdd.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/ReferenceAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVmZXJlbmNlQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/ReferenceUpdate.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/ReferenceUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVmZXJlbmNlVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/WorkAreaAdd.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/WorkAreaAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV29ya0FyZWFBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/WorkingArea.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/WorkingArea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV29ya2luZ0FyZWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Admin/WorkingAreaUpdate.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Admin/WorkingAreaUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV29ya2luZ0FyZWFVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Blog/Blog.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Blog/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Blog/BlogDetails.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Blog/BlogDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Components/AboutUsComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Components/AboutUsComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXEFib3V0VXNDb21wb25lbnRzXGRlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Components/BlogComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Components/BlogComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXEJsb2dDb21wb25lbnRzXGRlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Components/ProjectComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Components/ProjectComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXFByb2plY3RDb21wb25lbnRzXGRlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Components/ReferenceComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Components/ReferenceComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXFJlZmVyZW5jZUNvbXBvbmVudHNcZGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Components/WorkAreaComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Components/WorkAreaComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXFdvcmtBcmVhQ29tcG9uZW50c1xkZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Home/Index.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Project/Project.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Project/Project.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxQcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Project/ProjectDetails.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Project/ProjectDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxQcm9qZWN0RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Reference/Reference.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Reference/Reference.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlXFJlZmVyZW5jZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/Components/FooterComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/Components/FooterComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyQ29tcG9uZW50c1xkZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/Components/HeaderComponents/default.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/Components/HeaderComponents/default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyQ29tcG9uZW50c1xkZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/Error.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/WorkingArea/WorkingPlaces.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/WorkingArea/WorkingPlaces.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2luZ0FyZWFcV29ya2luZ1BsYWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/_ViewImports.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/_ViewStart.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Renewable_Energy/Renewable_Energy/Views/Shared/_Layout.cshtml]
+[C:/Users/PC/Desktop/RenewableEnergy/Renewable_Energy/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-uxllixf722

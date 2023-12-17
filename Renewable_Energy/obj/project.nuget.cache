@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M3AaqvkquFilWyYKm798kF+8Ot1FvVV00+XCEGoZ1JXQZcobdl/E36907EMuuqBNsxKHvgYH8ywn9WRf8uyVDw==",
+  "dgSpecHash": "sWZuAPEjsMqhxh+Jr4G8edUMZjGje4dEDBtzz7vU2mTR8sYaWZmJCtGN9piNswascw6dGoJIG3ijYjgio2UhBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\Renewable_Energy\\Renewable_Energy\\Renewable_Energy_Web.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\Renewable_Energy_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

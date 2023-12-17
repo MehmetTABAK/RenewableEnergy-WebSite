@@ -30,14 +30,31 @@
                         <td>@aboutus.Id</td>
                         <td>@aboutus.Title</td>
                         <td>@aboutus.Body</td>
-                        <td>@aboutus.ImageUrl</td>
-                        <td>@aboutus.VideoUrl</td>
+                        <td><img style="width:90px; height:70px;" src="@aboutus.ImageUrl"></td>
+                        <td>
+                            <div class="video-has-img">
+                                <a class="video__btn video__btn-white popup-video" href="@aboutus.VideoUrl">
+                                    <div class="video__player">
+                                        <i class="fa fa-play"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
                         <td>@aboutus.Vision</td>
                         <td>@aboutus.Mission</td>
                         <td>@aboutus.Number</td>
                         <td>@aboutus.Email</td>
                         <td>@aboutus.Address</td>
-                        <td>@aboutus.Location</td>
+                        <td>
+                        @if (aboutus.Location.Length > 28)
+                        {
+                            <p>@aboutus.Location.Substring(0, 28) ...</p>
+                        }
+                        else
+                        {
+                            <p>@aboutus.Location</p>
+                        }
+                        </td>
                         <td>@aboutus.WorkingTimes</td>
                         <th><a class="btn btn-primary" href="@Url.Action("AboutUsUpdate","Admin",new{id=aboutus.Id})">Düzenle</a></th>
                     </tr>

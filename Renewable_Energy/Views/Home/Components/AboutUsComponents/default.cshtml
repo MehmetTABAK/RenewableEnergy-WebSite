@@ -13,7 +13,7 @@
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-12 col-lg-5">
                 <div class="video-banner-layout2">
-                    <img src="~/images/about/1.jpg" alt="about" class="w-100">
+                    <img src="~/images/anasayfa3.jpg" alt="about" class="w-100">
                     <div class="video-has-img">
                         <img src="~/images/video/1.jpg" alt="video">
                         <a class="video__btn video__btn-white popup-video" href="@Model.FirstOrDefault()?.VideoUrl">
@@ -31,7 +31,14 @@
                         <i class="icon-green-energy3"></i>
                     </div>
                     <p class="heading__desc font-weight-medium color-secondary mb-30">
-                        @Model.FirstOrDefault()?.Body
+                        @if (@Model.FirstOrDefault()?.Body.Length > 250)
+                        {
+                            <p>@Model.FirstOrDefault()?.Body.Substring(0, 250) ...</p>
+                        }
+                        else
+                        {
+                            <p>@Model.FirstOrDefault()?.Body</p>
+                        }
                     </p>
                     <hr>
                     <ul class="nav nav-tabs">
@@ -42,10 +49,29 @@
                     <!-- Tabs Content Starts -->
                     <div class="tab-content">
                         <div id="menu1" class="tab-pane fade">
-                            <p>@Model.FirstOrDefault()?.Mission</p>
+                            @if (@Model.FirstOrDefault()?.Mission.Length > 230)
+                            {
+                                <p>@Model.FirstOrDefault()?.Mission.Substring(0, 240) ...</p>
+                            }
+                            else
+                            {
+                                <p><p>@Model.FirstOrDefault()?.Mission</p></p>
+                            }
                         </div>
                         <div id="menu2" class="tab-pane fade in active">
-                            <p>@Model.FirstOrDefault()?.Vision</p>
+                            @if (@Model.FirstOrDefault()?.Vision.Length > 230)
+                            {
+                                <p>@Model.FirstOrDefault()?.Vision.Substring(0, 240) ...</p>
+                            }
+                            else
+                            {
+                                <p><p>@Model.FirstOrDefault()?.Vision</p></p>
+                            }
+                        </div>
+                        <div class="d-flex">
+                            <a href="@Url.ActionLink("About","AboutUs")" class="btn btn__primary mr-30">
+                                <i class="icon-arrow-right"></i><span>Hakkımızda Daha Fazla Bilgi</span>
+                            </a>
                         </div>
                     </div>
                 </div><!-- /.about__text -->

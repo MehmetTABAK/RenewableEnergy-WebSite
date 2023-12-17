@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Renewable_Energy_DataAccess;
@@ -13,12 +14,14 @@ namespace Renewable_Energy_Web.Controllers
     {
         RenewableEnergyContext context = new();
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        public async Task<IActionResult> Project()
+		[Authorize]
+		public async Task<IActionResult> Project()
         {
             List<ProjectUpdateDTO> categories = context.Projects.Include(w => w.Category).Include(w => w.Reference).ToList().Select(categories =>
             new ProjectUpdateDTO
@@ -38,20 +41,40 @@ namespace Renewable_Energy_Web.Controllers
             return View(categories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public IActionResult ProjectAdd()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult ProjectAdd(ProjectUpdateDTO model)
+		[Authorize]
+		[HttpPost]
+        public IActionResult ProjectAdd(ProjectUpdateDTO model, IFormFile ImageFile)
         {
+			if (string.IsNullOrEmpty(model.ImageUrl))
+			{
+				model.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                // Resim dosyasını kaydetme işlemleri
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/images/" + fileName; // Resmin web yolunu modeldeki ImageUrl'e ata
+            }
+
             Project project = new()
             {
                 Title = model.Title,
                 Body = model.Body,
-
                 ImageUrl = model.ImageUrl,
                 VideoUrl = model.VideoUrl,
                 ReferenceId = model.ReferenceId,
@@ -64,7 +87,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Project");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownAddCategory(string name)
         {
             ViewData["Name"] = name;
@@ -72,7 +96,8 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownAddCategory", projectCategories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownAddReference(string name)
         {
             ViewData["Name"] = name;
@@ -80,17 +105,24 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownAddReference", projectReferences);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> ProjectUpdate(int id)
         {
             var project = await context.Projects.FirstOrDefaultAsync(w => w.Id == id);
             return View(project);
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public async Task<IActionResult> ProjectUpdate(ProjectUpdateDTO pc)
         {
-            var projectUpdate = await context.Projects.FirstOrDefaultAsync(w => w.Id == pc.Id);
+			if (string.IsNullOrEmpty(pc.ImageUrl))
+			{
+				pc.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+			var projectUpdate = await context.Projects.FirstOrDefaultAsync(w => w.Id == pc.Id);
             projectUpdate.Title = pc.Title;
             projectUpdate.Body = pc.Body;
             projectUpdate.ImageUrl = pc.ImageUrl;
@@ -103,7 +135,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Project");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownCategory(string name, int value)
         {
             ViewData["Name"] = name;
@@ -112,7 +145,8 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownCategory", projectCategories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownReference(string name, int value)
         {
             ViewData["Name"] = name;
@@ -121,7 +155,8 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownReference", projectReferences);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> ProjectDelete(int id)
         {
             var project = await context.Projects.FirstOrDefaultAsync(w => w.Id == id);
@@ -130,7 +165,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Project");
         }
 
-        public async Task<IActionResult> Blog()
+		[Authorize]
+		public async Task<IActionResult> Blog()
         {
             List<BlogCategoryDTO> categories = context.Blogs.Include(w => w.Category).ToList().Select(categories =>
             new BlogCategoryDTO
@@ -149,16 +185,23 @@ namespace Renewable_Energy_Web.Controllers
             return View(categories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public IActionResult BlogAdd()
         {
             return View();
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public IActionResult BlogAdd(BlogCategoryDTO model)
         {
-            Blog blog = new()
+			if (string.IsNullOrEmpty(model.ImageUrl))
+			{
+				model.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+			Blog blog = new()
             {
                 Title = model.Title,
                 Body = model.Body,
@@ -174,7 +217,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Blog");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownAddBlogCategory(string name)
         {
             ViewData["Name"] = name;
@@ -182,17 +226,24 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownAddBlogCategory", blogCategories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> BlogUpdate(int id)
         {
             var blog = await context.Blogs.FirstOrDefaultAsync(w => w.Id == id);
             return View(blog);
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public async Task<IActionResult> BlogUpdate(BlogCategoryDTO bc)
         {
-            var blogUpdate = await context.Blogs.FirstOrDefaultAsync(w => w.Id == bc.Id);
+			if (string.IsNullOrEmpty(bc.ImageUrl))
+			{
+				bc.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+			var blogUpdate = await context.Blogs.FirstOrDefaultAsync(w => w.Id == bc.Id);
             blogUpdate.Title = bc.Title;
             blogUpdate.Body = bc.Body;
             blogUpdate.ImageUrl = bc.ImageUrl;
@@ -205,7 +256,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Blog");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> DropdownCategoryBlog(string name, int value)
         {
             ViewData["Name"] = name;
@@ -214,7 +266,8 @@ namespace Renewable_Energy_Web.Controllers
             return PartialView("Partials/_DropdownCategoryBlog", blogCategories);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> BlogDelete(int id)
         {
             var blog = await context.Blogs.FirstOrDefaultAsync(w => w.Id == id);
@@ -223,7 +276,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Blog");
         }
 
-        public async Task<IActionResult> Reference()
+		[Authorize]
+		public async Task<IActionResult> Reference()
         {
             List<ReferenceProjectDTO> reference = context.References.Include(w => w.Projects).ThenInclude(w => w.Category).ToList().Select(reference =>
             new ReferenceProjectDTO
@@ -238,16 +292,23 @@ namespace Renewable_Energy_Web.Controllers
             return View(reference);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public IActionResult ReferenceAdd()
         {
             return View();
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public IActionResult ReferenceAdd(Reference model)
         {
-            Reference refe = new()
+			if (string.IsNullOrEmpty(model.ImageUrl))
+			{
+				model.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+			Reference refe = new()
             {
                 Name = model.Name,
                 ImageUrl = model.ImageUrl,
@@ -260,17 +321,24 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Reference");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> ReferenceUpdate(int id)
         {
             var reference = await context.References.FirstOrDefaultAsync(w => w.Id == id);
             return View(reference);
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public async Task<IActionResult> ReferenceUpdate(Reference rp)
         {
-            var referenceUpdate = await context.References.FirstOrDefaultAsync(w => w.Id == rp.Id);
+			if (string.IsNullOrEmpty(rp.ImageUrl))
+			{
+				rp.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
+			}
+
+			var referenceUpdate = await context.References.FirstOrDefaultAsync(w => w.Id == rp.Id);
             referenceUpdate.Name = rp.Name;
             referenceUpdate.ImageUrl = rp.ImageUrl;
 
@@ -279,7 +347,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Reference");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> ReferenceDelete(int id)
         {
             var refe = await context.References.FirstOrDefaultAsync(w => w.Id == id);
@@ -288,7 +357,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("Reference");
         }
 
-        public async Task<IActionResult> WorkingArea()
+		[Authorize]
+		public async Task<IActionResult> WorkingArea()
         {
             List<WorkingArea> area = context.WorkingAreas.ToList().Select(area =>
             new WorkingArea
@@ -304,16 +374,23 @@ namespace Renewable_Energy_Web.Controllers
             return View(area);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public IActionResult WorkAreaAdd()
         {
             return View();
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public IActionResult WorkAreaAdd(WorkingArea model)
         {
-            WorkingArea area = new()
+			if (string.IsNullOrEmpty(model.ImageUrl))
+			{
+				model.ImageUrl = "https://i.hizliresim.com/gfipifw.png";
+			}
+
+			WorkingArea area = new()
             {
                 Title = model.Title,
                 Body = model.Body,
@@ -327,17 +404,24 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("WorkingArea");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> WorkingAreaUpdate(int id)
         {
             var area = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == id);
             return View(area);
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public async Task<IActionResult> WorkingAreaUpdate(WorkingArea area)
         {
-            var areaUpdate = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == area.Id);
+			if (string.IsNullOrEmpty(area.ImageUrl))
+			{
+				area.ImageUrl = "https://i.hizliresim.com/gfipifw.png";
+			}
+
+			var areaUpdate = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == area.Id);
             areaUpdate.Title = area.Title;
             areaUpdate.Body = area.Body;
             areaUpdate.Details = area.Details;
@@ -348,7 +432,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("WorkingArea");
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> WorkingAreaDelete(int id)
         {
             var working = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == id);
@@ -357,7 +442,8 @@ namespace Renewable_Energy_Web.Controllers
             return RedirectToAction("WorkingArea");
         }
 
-        public async Task<IActionResult> AboutUs()
+		[Authorize]
+		public async Task<IActionResult> AboutUs()
         {
             List<AboutUs> aboutUs = context.AboutUs.ToList().Select(aboutUs =>
             new AboutUs
@@ -380,14 +466,16 @@ namespace Renewable_Energy_Web.Controllers
             return View(aboutUs);
         }
 
-        [HttpGet]
+		[Authorize]
+		[HttpGet]
         public async Task<IActionResult> AboutUsUpdate(int id)
         {
             var aboutUs = context.AboutUs.FirstOrDefault(w => w.Id == id);
             return View(aboutUs);
         }
 
-        [HttpPost]
+		[Authorize]
+		[HttpPost]
         public async Task<IActionResult> AboutUsUpdate(AboutUs au)
         {
             var aboutusUpdate = await context.AboutUs.FirstOrDefaultAsync(w => w.Id == au.Id);

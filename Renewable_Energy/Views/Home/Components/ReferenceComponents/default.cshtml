@@ -35,20 +35,23 @@
                     <!-- service item #1 -->
                     @foreach (var refe in Model)
                     {
-                        <div class="service-item">
-                            <div class="service__img">
-                                <img src="@refe.ReferenceImageUrl" alt="service" loading="lazy">
-                            </div><!-- /.service__img -->
-                            <div class="service__body">
-                                <h4 class="service__title">
-                                    @refe.ReferenceName
-                                </h4>
-                                <p class="service__desc">
-                                    @refe.ProjectName
-                                </p>
-                            </div><!-- /.service__body -->
-                        </div>
-                        <!-- /.service-item -->
+                        if (refe.Id != 1)
+                        {
+                            <div class="service-item">
+                                <div class="service__img">
+                                    <img src="@refe.ReferenceImageUrl" alt="service" loading="lazy">
+                                </div><!-- /.service__img -->
+                                <div class="service__body">
+                                    <h4 class="service__title">
+                                        @refe.ReferenceName
+                                    </h4>
+                                    <p class="service__desc">
+                                        @refe.ProjectName
+                                    </p>
+                                </div><!-- /.service__body -->
+                            </div>
+                            <!-- /.service-item -->
+                        }
                     }
                 </div><!-- /.carousel-->
             </div><!-- /.col-12 -->

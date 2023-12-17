@@ -31,12 +31,12 @@ License: For each use you must have a valid license purchased only from above li
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 	<!--end::Fonts-->
 	<!--begin::Vendor Stylesheets(used for this page only)-->
-	<link href="~/demo1/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="~/demo1/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="~/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="~/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Vendor Stylesheets-->
 	<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-	<link href="~/demo1/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="~/demo1/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="~/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="~/css/sstyle.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
 	<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 </head>
@@ -476,13 +476,13 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
 								<!--begin::Menu wrapper-->
 								<div class="cursor-pointer symbol symbol-35px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-									<img src="~/demo1/assets/media/avatars/300-3.jpg" class="rounded-3" alt="user" />
+									<img src="~/images/300-3.jpg" class="rounded-3" alt="user" />
 								</div>
 								<!--begin::User account menu-->
 								<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+										<a href="/Login/LogOut" class="menu-link px-5">Çıkış Yap</a>
 									</div>
 									<!--end::Menu item-->
 								</div>
@@ -869,11 +869,11 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Javascript-->
 	<script>var hostUrl = "~/demo1/assets/";</script>
 	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-	<script src="~/demo1/assets/plugins/global/plugins.bundle.js"></script>
-	<script src="~/demo1/assets/js/scripts.bundle.js"></script>
+	<script src="~/plugins/global/plugins.bundle.js"></script>
+	<script src="~/js/scripts.bundle.js"></script>
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Vendors Javascript(used for this page only)-->
-	<script src="~/demo1/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+	<script src="~/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
@@ -885,16 +885,16 @@ License: For each use you must have a valid license purchased only from above li
 	<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-	<script src="~/demo1/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+	<script src="~/plugins/custom/datatables/datatables.bundle.js"></script>
 	<!--end::Vendors Javascript-->
 	<!--begin::Custom Javascript(used for this page only)-->
-	<script src="~/demo1/assets/js/widgets.bundle.js"></script>
-	<script src="~/demo1/assets/js/custom/widgets.js"></script>
-	<script src="~/demo1/assets/js/custom/apps/chat/chat.js"></script>
-	<script src="~/demo1/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-	<script src="~/demo1/assets/js/custom/utilities/modals/create-app.js"></script>
-	<script src="~/demo1/assets/js/custom/utilities/modals/new-target.js"></script>
-	<script src="~/demo1/assets/js/custom/utilities/modals/users-search.js"></script>
+	<script src="~/js/widgets.bundle.js"></script>
+	<script src="~/js/custom/widgets.js"></script>
+	<script src="~/js/custom/apps/chat/chat.js"></script>
+	<script src="~/js/custom/utilities/modals/upgrade-plan.js"></script>
+	<script src="~/js/custom/utilities/modals/create-app.js"></script>
+	<script src="~/js/custom/utilities/modals/new-target.js"></script>
+	<script src="~/js/custom/utilities/modals/users-search.js"></script>
 
 	@RenderSection("Scripts", required: false)
 	<!--end::Custom Javascript-->

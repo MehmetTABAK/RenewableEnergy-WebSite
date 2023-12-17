@@ -19,14 +19,17 @@
             <tbody>
                 @foreach (var refe in Model)
                 {
-                    <tr>
-                        <td>@refe.Id</td>
-                        <td>@refe.ReferenceName</td>
-                        <td>@refe.ReferenceImageUrl</td>
-                        <td>@refe.ProjectName</td>
-                        <th><a class="btn btn-primary" href="@Url.Action("ReferenceUpdate","Admin",new{id=refe.Id})">Düzenle</a></th>
-                        <th><a class="btn btn-warning" href="@Url.Action("ReferenceDelete","Admin",new{id=refe.Id})">Sil</a></th>
-                    </tr>
+                    if (refe.Id != 1)
+                    {
+                        <tr>
+                            <td>@refe.Id</td>
+                            <td>@refe.ReferenceName</td>
+                            <td><img style="width:90px; height:70px;" src="@refe.ReferenceImageUrl"></td>
+                            <td>@refe.ProjectName</td>
+                            <th><a class="btn btn-primary" href="@Url.Action("ReferenceUpdate","Admin",new{id=refe.Id})">Düzenle</a></th>
+                            <th><a class="btn btn-warning" href="@Url.Action("ReferenceDelete","Admin",new{id=refe.Id})">Sil</a></th>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>

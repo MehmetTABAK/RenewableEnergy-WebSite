@@ -26,8 +26,19 @@
                         <td>@project.Id</td>
                         <td>@project.Title</td>
                         <td>@project.Body</td>
-                        <td>@project.ImageUrl</td>
-                        <td>@project.VideoUrl</td>
+                        <td><img style="width:90px; height:70px;" src="@project.ImageUrl"></td>
+                        <td>
+                            @if (project.VideoUrl != null)
+                            {
+                                <div class="video-has-img">
+                                    <a class="video__btn video__btn-white popup-video" href="@project.VideoUrl">
+                                        <div class="video__player">
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            } 
+                        </td>
                         <td>@project.ReferenceName</td>
                         <td>@project.CategoryName</td>
                         <th><a class="btn btn-primary" href="@Url.Action("ProjectUpdate","Admin",new{id=project.Id})">Düzenle</a></th>

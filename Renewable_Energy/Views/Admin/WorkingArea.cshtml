@@ -25,7 +25,7 @@
                         <td>@area.Title</td>
                         <td>@area.Body</td>
                         <td>@area.Details</td>
-                        <td>@area.ImageUrl</td>
+                        <td><img style="width:90px; height:70px;" src="@area.ImageUrl"></td>
                         <th><a class="btn btn-primary" href="@Url.Action("WorkingAreaUpdate","Admin",new{id=area.Id})">Düzenle</a></th>
                         <th><a class="btn btn-warning" href="@Url.Action("WorkingAreaDelete","Admin",new{id=area.Id})">Sil</a></th>
                     </tr>

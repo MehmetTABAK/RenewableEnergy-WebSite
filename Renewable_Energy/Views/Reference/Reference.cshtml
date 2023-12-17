@@ -27,26 +27,29 @@
             <div class="row">
                 @foreach (var refer in Model)
                 {
-                    <!-- Member #1 -->
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <div class="member">
-                            <div class="member__img">
-                                <img src="@refer.ReferenceImageUrl" alt="member img">
-                            </div><!-- /.member-img -->
-                            <div class="member__info d-flex align-items-center justify-content-between">
-                                <div>
-                                    <h5 class="member__name">@refer.ReferenceName</h5>
-                                    <p class="member__desc">@refer.ProjectName</p>
-                                </div>
-                                <ul class="social-icons list-unstyled mb-0">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div><!-- /.member-info -->
-                        </div><!-- /.member -->
-                    </div>
-                    <!-- /.col-lg-4 -->
+                    if (refer.Id != 1)
+                    {
+                        <!-- Member #1 -->
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="member">
+                                <div class="member__img">
+                                    <img src="@refer.ReferenceImageUrl" alt="member img">
+                                </div><!-- /.member-img -->
+                                <div class="member__info d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h5 class="member__name">@refer.ReferenceName</h5>
+                                        <p class="member__desc">@refer.ProjectName</p>
+                                    </div>
+                                    <ul class="social-icons list-unstyled mb-0">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div><!-- /.member-info -->
+                            </div><!-- /.member -->
+                        </div>
+                        <!-- /.col-lg-4 -->
+                    }
                 }
             </div> <!-- /.row -->
         </div><!-- /.container -->

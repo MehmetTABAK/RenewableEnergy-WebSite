@@ -18,6 +18,7 @@ namespace Renewable_Energy_DataAccess
         public virtual DbSet<ProjectBlogRelation> ProjectBlogRelations{ get; set; }
         public virtual DbSet<Reference> References{ get; set; }
         public virtual DbSet<WorkingArea> WorkingAreas{ get; set; }
+        public virtual DbSet<Login> Logins{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

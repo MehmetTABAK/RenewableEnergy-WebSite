@@ -28,9 +28,4 @@
     <ProjectReference Include="..\Renewable_Energy_Entities\Renewable_Energy_Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\BlogCategory\" />
-    <Folder Include="Views\ProjectCategory\" />
-  </ItemGroup>
-
 </Project>

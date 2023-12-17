@@ -6,23 +6,31 @@
 
 <div class="mid-class">
     <div class="art-right-w3ls">
-        <h2>Çalışma Alanları Ekle</h2>
+        <h1>Çalışma Alanları Ekle</h1>
+        <h5>(Doldurulması zorunlu olan bölümler başında * işareti ile belirtilmiştir.)</h5>
+        <br />
         <form action="#" method="post">
             <div class="main">
                 <div class="form-left-to-w3l">
                     @using (Html.BeginForm("WorkAreaAdd", "Admin", FormMethod.Post))
                     {
+                        <span style="color:red;">*</span>
                         @Html.LabelFor(v => v.Title)
-                        @Html.TextBoxFor(v => v.Title, new{@class = "form-control"})
+                        @Html.TextBoxFor(v => v.Title, new { @class = "form-control", @required = "required" })
+                        <br />
 
+                        <span style="color:red;">*</span>
                         @Html.LabelFor(v => v.Body)
-                        @Html.TextBoxFor(v => v.Body, new{@class = "form-control"})
+                        @Html.TextBoxFor(v => v.Body, new { @class = "form-control", @required = "required" })
+                        <br />
 
                         @Html.LabelFor(v => v.Details)
-                        @Html.TextBoxFor(v => v.Details, new{@class = "form-control"})
+                        @Html.TextBoxFor(v => v.Details, new { @class = "form-control"})
+                        <br />
 
                         @Html.LabelFor(v => v.ImageUrl)
                         @Html.TextBoxFor(v => v.ImageUrl, new{@class = "form-control"})
+                        <br />
 
                         <button class="btn btn-warning">Ekle</button>
                     }
