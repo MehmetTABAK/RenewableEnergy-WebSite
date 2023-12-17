@@ -46,7 +46,7 @@
                                 <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})">
                                     <img src="@blog.ImageUrl" alt="post image" loading="lazy">
                                 </a>
-                                <span class="post__date">@blog.Time</span>
+                                <span class="post__date">@blog.Time.ToShortDateString()</span>
                             </div><!-- /.post-img -->
                             <div class="post__body">
                                 <div class="post__meta d-flex align-items-center">

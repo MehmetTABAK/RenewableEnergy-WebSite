@@ -22,7 +22,7 @@
                         </div><!-- /.entry-img -->
                         <div class="post__body">
                             <div class="post__meta d-flex align-items-center">
-                                <span class="post__date">@Model.Time</span>
+                                <span class="post__date">@Model.Time.ToShortDateString()</span>
                                 <span class="post__author">Yazar: <a href="#">@Model.Writer</a></span>
                             </div><!-- /.post-meta -->
                             <h1 class="post__title">@Model.Title</h1>

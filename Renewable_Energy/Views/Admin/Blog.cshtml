@@ -27,7 +27,7 @@
                         <td>@blog.Title</td>
                         <td>@blog.Body</td>
                         <td><img style="width:90px; height:70px;" src="@blog.ImageUrl"></td>
-                        <td>@blog.Time</td>
+                        <td>@blog.Time.ToShortDateString()</td>
                         <td>@blog.Writer</td>
                         <td>@blog.CategoryName</td>
                         <th><a class="btn btn-primary" href="@Url.Action("BlogUpdate","Admin",new{id=blog.Id})">Düzenle</a></th>

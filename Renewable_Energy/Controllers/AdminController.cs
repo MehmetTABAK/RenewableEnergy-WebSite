@@ -59,7 +59,6 @@ namespace Renewable_Energy_Web.Controllers
 
             if (ImageFile != null && ImageFile.Length > 0)
             {
-                // Resim dosyasını kaydetme işlemleri
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
                 var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
 
@@ -68,7 +67,7 @@ namespace Renewable_Energy_Web.Controllers
                     ImageFile.CopyTo(stream);
                 }
 
-                model.ImageUrl = "/images/" + fileName; // Resmin web yolunu modeldeki ImageUrl'e ata
+                model.ImageUrl = "/images/" + fileName;
             }
 
             Project project = new()
@@ -115,14 +114,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public async Task<IActionResult> ProjectUpdate(ProjectUpdateDTO pc)
+        public async Task<IActionResult> ProjectUpdate(ProjectUpdateDTO pc, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(pc.ImageUrl))
 			{
 				pc.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
 			}
 
-			var projectUpdate = await context.Projects.FirstOrDefaultAsync(w => w.Id == pc.Id);
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                pc.ImageUrl = "/images/" + fileName;
+            }
+
+            var projectUpdate = await context.Projects.FirstOrDefaultAsync(w => w.Id == pc.Id);
             projectUpdate.Title = pc.Title;
             projectUpdate.Body = pc.Body;
             projectUpdate.ImageUrl = pc.ImageUrl;
@@ -194,14 +206,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public IActionResult BlogAdd(BlogCategoryDTO model)
+        public IActionResult BlogAdd(BlogCategoryDTO model, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(model.ImageUrl))
 			{
 				model.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
 			}
 
-			Blog blog = new()
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/images/" + fileName;
+            }
+
+            Blog blog = new()
             {
                 Title = model.Title,
                 Body = model.Body,
@@ -236,14 +261,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public async Task<IActionResult> BlogUpdate(BlogCategoryDTO bc)
+        public async Task<IActionResult> BlogUpdate(BlogCategoryDTO bc, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(bc.ImageUrl))
 			{
 				bc.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
 			}
 
-			var blogUpdate = await context.Blogs.FirstOrDefaultAsync(w => w.Id == bc.Id);
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                bc.ImageUrl = "/images/" + fileName;
+            }
+
+            var blogUpdate = await context.Blogs.FirstOrDefaultAsync(w => w.Id == bc.Id);
             blogUpdate.Title = bc.Title;
             blogUpdate.Body = bc.Body;
             blogUpdate.ImageUrl = bc.ImageUrl;
@@ -301,14 +339,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public IActionResult ReferenceAdd(Reference model)
+        public IActionResult ReferenceAdd(Reference model, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(model.ImageUrl))
 			{
 				model.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
 			}
 
-			Reference refe = new()
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/images/" + fileName;
+            }
+
+            Reference refe = new()
             {
                 Name = model.Name,
                 ImageUrl = model.ImageUrl,
@@ -331,14 +382,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public async Task<IActionResult> ReferenceUpdate(Reference rp)
+        public async Task<IActionResult> ReferenceUpdate(Reference rp, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(rp.ImageUrl))
 			{
 				rp.ImageUrl = "https://i.hizliresim.com/jhoavae.png";
 			}
 
-			var referenceUpdate = await context.References.FirstOrDefaultAsync(w => w.Id == rp.Id);
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                rp.ImageUrl = "/images/" + fileName;
+            }
+
+            var referenceUpdate = await context.References.FirstOrDefaultAsync(w => w.Id == rp.Id);
             referenceUpdate.Name = rp.Name;
             referenceUpdate.ImageUrl = rp.ImageUrl;
 
@@ -383,14 +447,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public IActionResult WorkAreaAdd(WorkingArea model)
+        public IActionResult WorkAreaAdd(WorkingArea model, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(model.ImageUrl))
 			{
 				model.ImageUrl = "https://i.hizliresim.com/gfipifw.png";
 			}
 
-			WorkingArea area = new()
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/images/" + fileName;
+            }
+
+            WorkingArea area = new()
             {
                 Title = model.Title,
                 Body = model.Body,
@@ -414,14 +491,27 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public async Task<IActionResult> WorkingAreaUpdate(WorkingArea area)
+        public async Task<IActionResult> WorkingAreaUpdate(WorkingArea area, IFormFile ImageFile)
         {
 			if (string.IsNullOrEmpty(area.ImageUrl))
 			{
 				area.ImageUrl = "https://i.hizliresim.com/gfipifw.png";
 			}
 
-			var areaUpdate = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == area.Id);
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                area.ImageUrl = "/images/" + fileName;
+            }
+
+            var areaUpdate = await context.WorkingAreas.FirstOrDefaultAsync(w => w.Id == area.Id);
             areaUpdate.Title = area.Title;
             areaUpdate.Body = area.Body;
             areaUpdate.Details = area.Details;
@@ -476,8 +566,26 @@ namespace Renewable_Energy_Web.Controllers
 
 		[Authorize]
 		[HttpPost]
-        public async Task<IActionResult> AboutUsUpdate(AboutUs au)
+        public async Task<IActionResult> AboutUsUpdate(AboutUs au, IFormFile ImageFile)
         {
+            if (string.IsNullOrEmpty(au.ImageUrl))
+            {
+                au.ImageUrl = "https://i.hizliresim.com/gfipifw.png";
+            }
+
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    ImageFile.CopyTo(stream);
+                }
+
+                au.ImageUrl = "/images/" + fileName;
+            }
+
             var aboutusUpdate = await context.AboutUs.FirstOrDefaultAsync(w => w.Id == au.Id);
             aboutusUpdate.Title = au.Title;
             aboutusUpdate.Body = au.Body;

@@ -205,60 +205,20 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon.woff"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\300-3.jpg",
-      "PackagePath": "staticwebassets\\images\\300-3.jpg"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\031942aa-b046-4144-b258-d66cdd8b88f8.jpg",
+      "PackagePath": "staticwebassets\\images\\031942aa-b046-4144-b258-d66cdd8b88f8.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\about\\1.jpg",
       "PackagePath": "staticwebassets\\images\\about\\1.jpg"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\about\\anasayfa3.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\anasayfa3.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\about\\singnture.png",
       "PackagePath": "staticwebassets\\images\\about\\singnture.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\anasayfa1.jpg",
-      "PackagePath": "staticwebassets\\images\\anasayfa1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\anasayfa2.jpg",
-      "PackagePath": "staticwebassets\\images\\anasayfa2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\anasayfa3.jpg",
-      "PackagePath": "staticwebassets\\images\\anasayfa3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\auth-bg.png",
-      "PackagePath": "staticwebassets\\images\\auth-bg.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\auth-screens.png",
-      "PackagePath": "staticwebassets\\images\\auth-screens.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\awards\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\awards\\6.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\backgrounds\\1.jpg",
@@ -345,120 +305,28 @@
       "PackagePath": "staticwebassets\\images\\banners\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\author\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\author\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\author\\2.png",
-      "PackagePath": "staticwebassets\\images\\blog\\author\\2.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\author\\3.png",
-      "PackagePath": "staticwebassets\\images\\blog\\author\\3.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\grid\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\grid\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\blog\\single\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\single\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\charts\\1.png",
-      "PackagePath": "staticwebassets\\images\\charts\\1.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\1.png",
-      "PackagePath": "staticwebassets\\images\\clients\\1.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\2.png",
-      "PackagePath": "staticwebassets\\images\\clients\\2.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\3.png",
-      "PackagePath": "staticwebassets\\images\\clients\\3.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\4.png",
-      "PackagePath": "staticwebassets\\images\\clients\\4.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\5.png",
-      "PackagePath": "staticwebassets\\images\\clients\\5.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\clients\\6.png",
-      "PackagePath": "staticwebassets\\images\\clients\\6.png"
-    },
-    {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\favicon\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\flags\\en.png",
-      "PackagePath": "staticwebassets\\images\\flags\\en.png"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\home\\anasayfa1.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\anasayfa1.jpg"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\flags\\fr.png",
-      "PackagePath": "staticwebassets\\images\\flags\\fr.png"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\home\\anasayfa2.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\anasayfa2.jpg"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\flags\\gr.png",
-      "PackagePath": "staticwebassets\\images\\flags\\gr.png"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\login\\auth-bg.png",
+      "PackagePath": "staticwebassets\\images\\login\\auth-bg.png"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\1.jpg"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\login\\auth-screens.png",
+      "PackagePath": "staticwebassets\\images\\login\\auth-screens.png"
     },
     {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\gallery\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\icons\\pdf.png",
-      "PackagePath": "staticwebassets\\images\\icons\\pdf.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\icons\\quote.png",
-      "PackagePath": "staticwebassets\\images\\icons\\quote.png"
+      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\logo\\300-3.jpg",
+      "PackagePath": "staticwebassets\\images\\logo\\300-3.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\logo\\logo.png",
@@ -539,178 +407,6 @@
     {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\panel\\yeni su.jpg",
       "PackagePath": "staticwebassets\\images\\panel\\yeni su.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\grid\\7.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\grid\\7.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\portfolio\\single\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\portfolio\\single\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\7.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\7.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\8.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\8.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\products\\9.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\9.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\services\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\services\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\sliders\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\sliders\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\team\\7.jpg",
-      "PackagePath": "staticwebassets\\images\\team\\7.jpg"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\quote-icon.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\quote-icon.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\quote-icon2.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\quote-icon2.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\thumbs\\1.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\thumbs\\1.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\thumbs\\2.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\thumbs\\2.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\thumbs\\3.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\thumbs\\3.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\thumbs\\4.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\thumbs\\4.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\testimonials\\thumbs\\5.png",
-      "PackagePath": "staticwebassets\\images\\testimonials\\thumbs\\5.png"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\video\\1.jpg",

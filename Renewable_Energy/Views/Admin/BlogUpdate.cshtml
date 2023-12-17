@@ -9,65 +9,69 @@
         <h1>Blog Güncelle</h1>
         <h5>(Doldurulması zorunlu olan bölümler başında * işareti ile belirtilmiştir.)</h5>
         <br />
-        <form action="#" method="post">
+        <form action="@Html.BeginForm("BlogUpdate", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" })" method="post">
             <div class="main">
                 <div class="form-left-to-w3l">
-                    @using (Html.BeginForm("BlogUpdate", "Admin", FormMethod.Post))
-                    {
-                        @Html.LabelFor(v => v.Id)
-                        @Html.TextBoxFor(v => v.Id, new{@class = "form-control", @readonly="readonly"})
-                        <br />
+                    @Html.LabelFor(v => v.Id)
+                    @Html.TextBoxFor(v => v.Id, new { @class = "form-control", @readonly = "readonly" })
+                    <br />
 
-                        <span style="color:red;">*</span>
-                        @Html.LabelFor(v => v.Title)
-                        @Html.TextBoxFor(v => v.Title, new { @class = "form-control", @required = "required" })
-                        <br />
+                    <span style="color:red;">*</span>
+                    @Html.LabelFor(v => v.Title)
+                    @Html.TextBoxFor(v => v.Title, new { @class = "form-control", @required = "required" })
+                    <br />
 
-                        <span style="color:red;">*</span>
-                        @Html.LabelFor(v => v.Body)
-                        @Html.TextBoxFor(v => v.Body, new { @class = "form-control", @required = "required" })
-                        <br />
+                    <span style="color:red;">*</span>
+                    @Html.LabelFor(v => v.Body)
+                    @Html.TextBoxFor(v => v.Body, new { @class = "form-control", @required = "required" })
+                    <br />
 
-                        @Html.LabelFor(v => v.ImageUrl)
-                        @Html.TextBoxFor(v => v.ImageUrl, new { @class = "form-control"})
-                        <br />
+                    @Html.LabelFor(v => v.ImageUrl)
+                    <input type="file" name="ImageFile" id="ImageFile" class="form-control" />
+                    <br />
 
-                        <span style="color:red;">*</span>
-                        @Html.LabelFor(v => v.Time)
-                        @Html.TextBoxFor(v => v.Time, new { @class = "form-control", @required = "required" })
-                        <br />
+                    <span style="color:red;">*</span>
+                    @Html.LabelFor(v => v.Time)
+                    <input type="text" name="Time" id="Time" class="form-control" readonly />
+                    <br />
 
-                        <span style="color:red;">*</span>
-                        @Html.LabelFor(v => v.Writer)
-                        @Html.TextBoxFor(v => v.Writer, new { @class = "form-control", @required = "required" })
+                    <span style="color:red;">*</span>
+                    @Html.LabelFor(v => v.Writer)
+                    @Html.TextBoxFor(v => v.Writer, new { @class = "form-control", @required = "required" })
 
-                        <br />
-                        <span style="color:red;">*</span>
-                        @Html.LabelFor(v => v.CategoryId)
-                        <div id="blogcategorydropdown"></div>
-                        <br />
+                    <br />
+                    <span style="color:red;">*</span>
+                    @Html.LabelFor(v => v.CategoryId)
+                    <div id="blogcategorydropdown"></div>
+                    <br />
 
-                        <button class="btn btn-warning">Güncelle</button>
-                    }
+                    <button class="btn btn-warning">Güncelle</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <script type="text/javascript">
         $(function () {
 
             $.ajax({
                 type: "GET",
-                url: "@Url.Action("DropdownCategoryBlog","Admin")?name=CategoryId&value=@Model.CategoryId",
+                url: "@Url.Action("DropdownCategoryBlog", "Admin")?name=CategoryId&value=@Model.CategoryId",
                 success: function (jsReturnArgs) {
 
                     $("#blogcategorydropdown").html(jsReturnArgs);
                 }
             });
 
+        });
+
+        $(function () {
+            var currentDate = new Date();
+            var formattedDate = currentDate.toISOString().split('T')[0];
+
+            $("#Time").val(formattedDate);
         });
     </script>
 }
