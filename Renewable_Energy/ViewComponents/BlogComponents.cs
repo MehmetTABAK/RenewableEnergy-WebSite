@@ -26,7 +26,7 @@ namespace Renewable_Energy_Web.ViewComponents
                         CategoryId = blog.CategoryId,
                         Time = blog.Time,
                         Writer = blog.Writer,
-                        CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+                        CategoryName = blog.Category.Name
                     }
                 ).ToList();
 

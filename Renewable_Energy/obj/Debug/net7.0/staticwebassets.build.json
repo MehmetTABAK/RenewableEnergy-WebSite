@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MbxUNsjRimtrchz3+WQvdhHSNkflfCYfLBvHCyD1OT8=",
+  "Hash": "kVlwmREDyvSmkKA59sq7K/UIkmb89A4CCEMPFte3LQ0=",
   "Source": "Renewable_Energy_Web",
   "BasePath": "_content/Renewable_Energy_Web",
   "Mode": "Default",
@@ -916,6 +916,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\031942aa-b046-4144-b258-d66cdd8b88f8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\a81a47e3-8fa7-44cb-8135-1b041eff7d9b.jpg",
+      "SourceId": "Renewable_Energy_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\",
+      "BasePath": "_content/Renewable_Energy_Web",
+      "RelativePath": "images/a81a47e3-8fa7-44cb-8135-1b041eff7d9b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a81a47e3-8fa7-44cb-8135-1b041eff7d9b.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\RenewableEnergy\\Renewable_Energy\\wwwroot\\images\\about\\1.jpg",

@@ -25,7 +25,7 @@ namespace Renewable_Energy_Web.ViewComponents
                         VideoUrl = project.VideoUrl,
                         ReferenceId = project.ReferenceId,
                         CategoryId = project.CategoryId,
-                        CategoryName = project.Category != null ? string.Join(", ", project.Category.Name) : string.Empty,
+                        CategoryName = project.Category.Name
                     }
                 ).ToList();
 
