@@ -1,6 +1,9 @@
 ﻿@using Renewable_Energy_Entities
 @using Renewable_Energy_Entities.DTOs
 @model List<BlogCategoryDTO>
+@{
+    var categories = Model.Select(w => w.CategoryName).Distinct().ToList();
+}
 
 <div class="wrapper">
     <!-- ========================
@@ -27,12 +30,11 @@
             <div class="row">
                 <div class="col-12">
                     <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">
-                        <li><a class="filter active" href="#" data-filter="all">Tüm Bloglar</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-gunes">Güneş Panelleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-ruzgar">Rüzgar Türbinleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-su">Su Türbinleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-jeo">Jeotermal Türbinler</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-jene">Jeneratörler</a></li>
+                        <li><a id="allBlogsFilter" class="filter active" href="#" data-filter="all">Tüm Bloglar</a></li>
+                        @foreach (var item in categories)
+                        {
+                            <li><a id="@item-Filter" class="filter" href="#" data-filter=".filter-@item.Replace(" ", "")">@item</a></li>
+                        }
                     </ul><!-- /.portfolio-filter  -->
                 </div><!-- /.col-lg-12 -->
                 <!-- Post Item #1 -->
@@ -40,7 +42,7 @@
             <div id="filtered-items-wrap" class="row">
                 @foreach (var blog in Model)
                 {
-                    <div class="col-sm-12 col-md-6 col-lg-4 mix filter-infractures">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mix filter-infractures filter-@blog.CategoryName.Replace(" ","")">
                         <div class="post-item">
                             <div class="post__img">
                                 <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})">
@@ -56,13 +58,23 @@
                                     <a class="post__author" href="#">@blog.Writer</a>
                                 </div><!-- /.post-meta -->
                                 <h4 class="post__title">
-                                    <a href="#">
-                                        @blog.Title
-                                    </a>
+                                    @if (blog.Title.Length > 25)
+                                    {
+                                        <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})">@blog.Title.Substring(0, 25) ...</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})">@blog.Title</a>
+                                    }
                                 </h4>
-                                <p class="post__desc">
-                                    @blog.Body
-                                </p>
+                                @if (blog.Body.Length > 120)
+                                {
+                                    <p class="post__desc">@blog.Body.Substring(0, 120) ...</p>
+                                }
+                                else
+                                {
+                                    <p class="post__desc">@blog.Body</p>
+                                }
                                 <a href="@Url.Action("BlogDetails","Blog", new{id=blog.Id})" class="btn btn__secondary btn__outlined btn__custom">
                                     <i class="icon-arrow-right"></i>
                                     <span>Devamını Oku</span>
@@ -76,25 +88,25 @@
         </div><!-- /.container -->
     </section><!-- /.blog Grid -->
     <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
-
 </div><!-- /.wrapper -->
-@section Scripts{
+
+@section Scripts {
     <script>
         $(function () {
             if (getParameterByName("selected") == "ruzgar") {
-                $("a[data-filter='.filter-ruzgar']").click();
+                $("a[data-filter='.filter-RüzgarTürbinleri']").click();
             }
             else if (getParameterByName("selected") == "su") {
-                $("a[data-filter='.filter-su']").click();
+                $("a[data-filter='.filter-SuTürbinleri']").click();
             }
             else if (getParameterByName("selected") == "gunes") {
-                $("a[data-filter='.filter-gunes']").click();
+                $("a[data-filter='.filter-GüneşPanelleri']").click();
             }
             else if (getParameterByName("selected") == "jeo") {
-                $("a[data-filter='.filter-jeo']").click();
+                $("a[data-filter='.filter-JeotermalTürbinler']").click();
             }
             else if (getParameterByName("selected") == "jene") {
-                $("a[data-filter='.filter-jene']").click();
+                $("a[data-filter='.filter-Jeneratörler']").click();
             }
         });
 
@@ -107,4 +119,4 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
     </script>
-    }
+}

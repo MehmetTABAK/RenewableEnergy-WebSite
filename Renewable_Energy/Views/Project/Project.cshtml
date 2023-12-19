@@ -2,6 +2,9 @@
 @using Renewable_Energy_Entities
 @using Renewable_Energy_Entities.DTOs
 @model List<ProjectCategoryDTO>
+@{
+    var categories = Model.Select(w => w.CategoryName).Distinct().ToList();
+}
 
 <div class="wrapper">
     <!-- ========================
@@ -32,18 +35,17 @@
                 <div class="col-12">
                     <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">
                         <li><a class="filter active" href="#" data-filter="all">Tüm Projeler</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-ruzgar">Rüzgar Türbinleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-su">Su Türbinleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-gunes">Güneş Panalleri</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-jeo">Jeotermal Türbin</a></li>
-                        <li><a class="filter" href="#" data-filter=".filter-jene">Jeneratör</a></li>
+                        @foreach (var item in categories)
+                        {
+                            <li><a id="@item-Filter" class="filter" href="#" data-filter=".filter-@item.Replace(" ", "")">@item</a></li>
+                        }
                     </ul><!-- /.portfolio-filter  -->
                 </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
             <div id="filtered-items-wrap" class="row">
                 @foreach (var project in Model)
                 {
-                    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-infractures">
+                    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-infractures filter-@project.CategoryName.Replace(" ","")">
                         <div class="portfolio-item">
                             <div class="portfolio__img">
                                 <img src="@project.ImageUrl" alt="portfolio img">
@@ -52,10 +54,24 @@
                                 <div class="portfolio__cat">
                                     <a href="#">@project.CategoryName</a>
                                 </div><!-- /.portfolio-cat -->
-                                <h4 class="portfolio__title"><a href="#">@project.Title</a></h4>
-                                <p class="portfolio__desc">
-                                    @project.Body
-                                </p>
+                                <h4 class="portfolio__title">
+                                    @if (project.Title.Length > 25)
+                                    {
+                                        <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})">@project.Title.Substring(0, 25) ...</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})">@project.Title</a>
+                                    }
+                                </h4>
+                                @if (project.Body.Length > 120)
+                                {
+                                    <p class="portfolio__desc">@project.Body.Substring(0, 120) ...</p>
+                                }
+                                else
+                                {
+                                    <p class="portfolio__desc">@project.Body</p>
+                                }
                                 <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})" class="btn btn__primary btn__sm">
                                     <i class="icon-arrow-right"></i>
                                     <span>Daha Fazlasını Öğrenin</span>
@@ -78,23 +94,23 @@
     <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
 </div><!-- /.wrapper -->
-@section Scripts{
+@section Scripts {
     <script>
         $(function () {
             if (getParameterByName("selected") == "ruzgar") {
-                $("a[data-filter='.filter-ruzgar']").click();
+                $("a[data-filter='.filter-RüzgarTürbinleri']").click();
             }
             else if (getParameterByName("selected") == "su") {
-                $("a[data-filter='.filter-su']").click();
+                $("a[data-filter='.filter-SuTürbinleri']").click();
             }
             else if (getParameterByName("selected") == "gunes") {
-                $("a[data-filter='.filter-gunes']").click();
+                $("a[data-filter='.filter-GüneşPanelleri']").click();
             }
             else if (getParameterByName("selected") == "jeo") {
-                $("a[data-filter='.filter-jeo']").click();
+                $("a[data-filter='.filter-JeotermalTürbinler']").click();
             }
             else if (getParameterByName("selected") == "jene") {
-                $("a[data-filter='.filter-jene']").click();
+                $("a[data-filter='.filter-Jeneratör']").click();
             }
         });
 
@@ -107,4 +123,4 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
     </script>
-    }
+}

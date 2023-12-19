@@ -20,7 +20,6 @@
             </div><!-- /col-lg-5 -->
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
                 <p class="heading__desc font-weight-bold color-gray mb-30">
-
                     Yenilikçi teknolojilerimizle, net bir şekilde odaklanma
                     bizim ihtiyaçları
                     müşterilerimiz ve 1.210 kendini adamış çalışanımızla topluma enerji veriyoruz. Yarını bugünden farklı kılalım!
@@ -33,7 +32,7 @@
                     <div class="slick-carousel carousel-arrows-light carousel-dots-light"
                          data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2 ,"slidesToScroll": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2,"slidesToScroll": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1,"slidesToScroll": 1}}]}'>
                         <!-- portfolio item #1 -->
-                        @foreach(var project in Model)
+                        @foreach (var project in Model)
                         {
                             <div class="portfolio-item">
                                 <div class="portfolio__img">
@@ -45,10 +44,24 @@
                                             @project.CategoryName
                                         </a>
                                     </div><!-- /.portfolio-cat -->
-                                    <h4 class="portfolio__title"><a href="#">@project.Title</a></h4>
-                                    <p class="portfolio__desc">
-                                        @project.Body
-                                    </p>
+                                    <h4 class="portfolio__title">
+                                        @if (project.Title.Length > 25)
+                                        {
+                                            <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})">@project.Title.Substring(0, 25) ...</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})">@project.Title</a>
+                                        }
+                                    </h4>
+                                    @if (project.Body.Length > 120)
+                                    {
+                                        <p class="portfolio__desc">@project.Body.Substring(0, 120) ...</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="portfolio__desc">@project.Body</p>
+                                    }
                                     <a href="@Url.Action("ProjectDetails","Project", new{id=project.Id})" class="btn btn__primary btn__sm">
                                         <i class="icon-arrow-right"></i>
                                         <span>

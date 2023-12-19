@@ -11,7 +11,11 @@ namespace Renewable_Energy_Web.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            List<ProjectCategoryDTO> projects = context.Projects.Include(w => w.Category).ToList().Select(project =>
+            List<ProjectCategoryDTO> projects = context.Projects
+                .Include(w => w.Category)
+                .OrderBy(x => Guid.NewGuid())
+                .Take(6)
+                .Select(project =>
                     new ProjectCategoryDTO
                     {
                         Id = project.Id,
@@ -24,6 +28,7 @@ namespace Renewable_Energy_Web.ViewComponents
                         CategoryName = project.Category != null ? string.Join(", ", project.Category.Name) : string.Empty,
                     }
                 ).ToList();
+
             return View(projects);
         }
     }

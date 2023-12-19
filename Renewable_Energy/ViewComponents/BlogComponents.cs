@@ -9,21 +9,27 @@ namespace Renewable_Energy_Web.ViewComponents
     {
         RenewableEnergyContext context = new();
 
-        public IViewComponentResult Invoke() 
+        public IViewComponentResult Invoke()
         {
-            List<BlogCategoryDTO> blog = context.Blogs.Include(w => w.Category).ToList().Select(blog =>
-            new BlogCategoryDTO
-            {
-                Id = blog.Id,
-                Title = blog.Title,
-                Body = blog.Body,
-                ImageUrl = blog.ImageUrl,
-                CategoryId = blog.CategoryId,
-                Time = blog.Time,
-                Writer = blog.Writer,
-                CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
-            }
-            ).ToList();
+            List<BlogCategoryDTO> blog = context.Blogs
+                .Include(w => w.Category)
+                .OrderBy(x => Guid.NewGuid())
+                .Take(3)
+                .ToList()
+                .Select(blog =>
+                    new BlogCategoryDTO
+                    {
+                        Id = blog.Id,
+                        Title = blog.Title,
+                        Body = blog.Body,
+                        ImageUrl = blog.ImageUrl,
+                        CategoryId = blog.CategoryId,
+                        Time = blog.Time,
+                        Writer = blog.Writer,
+                        CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+                    }
+                ).ToList();
+
             return View(blog);
         }
     }

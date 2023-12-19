@@ -9,23 +9,48 @@ namespace Renewable_Energy_Web.Controllers
     {
         RenewableEnergyContext context = new();
 
-        public IActionResult Blog()
+        public IActionResult Blog(string selectedCategory)
         {
-            List<BlogCategoryDTO> blog = context.Blogs.Include(w => w.Category).ToList().Select(blog =>
-            new BlogCategoryDTO
+            List<BlogCategoryDTO> blogs;
+
+            if (string.IsNullOrEmpty(selectedCategory) || selectedCategory.ToLower() == "all")
             {
-                Id = blog.Id,
-                Title = blog.Title,
-                Body = blog.Body,
-                ImageUrl = blog.ImageUrl,
-                CategoryId = blog.CategoryId,
-                Time = blog.Time,
-                Writer = blog.Writer,
-                CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+                blogs = context.Blogs.Include(w => w.Category).ToList().Select(blog =>
+                    new BlogCategoryDTO
+                    {
+                        Id = blog.Id,
+                        Title = blog.Title,
+                        Body = blog.Body,
+                        ImageUrl = blog.ImageUrl,
+                        CategoryId = blog.CategoryId,
+                        Time = blog.Time,
+                        Writer = blog.Writer,
+                        CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+                    }
+                ).ToList();
             }
-            ).ToList();
-            return View(blog);
+            else
+            {
+                blogs = context.Blogs.Include(w => w.Category)
+                    .Where(blog => blog.Category != null && blog.Category.Name.ToLower() == selectedCategory.ToLower())
+                    .Select(blog =>
+                        new BlogCategoryDTO
+                        {
+                            Id = blog.Id,
+                            Title = blog.Title,
+                            Body = blog.Body,
+                            ImageUrl = blog.ImageUrl,
+                            CategoryId = blog.CategoryId,
+                            Time = blog.Time,
+                            Writer = blog.Writer,
+                            CategoryName = blog.Category != null ? string.Join(", ", blog.Category.Name) : string.Empty,
+                        }
+                    ).ToList();
+            }
+            ViewBag.SelectedCategory = selectedCategory;
+            return View(blogs);      
         }
+
         public async Task<IActionResult> BlogDetails(int id)
         {
             var blog = await context.Blogs.FirstOrDefaultAsync(b => b.Id == id);
